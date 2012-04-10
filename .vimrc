@@ -55,4 +55,5 @@ inoremap jj <esc>
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " execute chisel.py from any of my github posts
-:map <F2> <Esc>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
+:nnoremap <leader>c <Esc>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
+
