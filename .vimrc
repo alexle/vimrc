@@ -54,6 +54,7 @@ inoremap jj <esc>
 " quick nerd tree toggle
 nnoremap <leader>n :NERDTreeToggle<CR>
 
-" execute chisel.py from any of my github posts
-:nnoremap <leader>c <Esc>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
+" save file and execute chisel.py from any of posts in my github directory
+:nnoremap <leader>m <Esc>:w<CR>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
+
 
