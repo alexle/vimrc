@@ -4,6 +4,7 @@ set guifont=lucida
 set nocompatible                 " no compatibility with old vi
 syntax enable                    " syntax highlighting
 filetype off                     " disable automatic file detection
+behave mswin                     " allow MS environment (ctrl-p, ctrl-v)
 
 " white space
 set nowrap
@@ -32,6 +33,8 @@ set guioptions=em                " e = show tab bar, m = show menu bar
 set showtabline=2                " ensures tab bar always displayed
 set tags+=tags;                  " map ctags path
 
+set diffexpr=                    " allows gvim diff
+
 " gui size and positioning
 set lines=50 columns=130
 winpos 100 100
@@ -56,5 +59,4 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 
 " save file and execute chisel.py from any of posts in my github directory
 :nnoremap <leader>m <Esc>:w<CR>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
-
 
