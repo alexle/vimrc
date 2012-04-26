@@ -1,10 +1,11 @@
+filetype off                     " disable automatic file detection
+set nocompatible                 " no compatibility with old vi
+
 color desert
 set guifont=lucida
 
-set nocompatible                 " no compatibility with old vi
 syntax enable                    " syntax highlighting
-filetype off                     " disable automatic file detection
-behave mswin                     " allow MS environment (ctrl-p, ctrl-v)
+behave mswin                     " allow MS environment ctrl-p, ctrl-v
 
 " white space
 set nowrap
@@ -59,4 +60,3 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 
 " save file and execute chisel.py from any of posts in my github directory
 :nnoremap <leader>m <Esc>:w<CR>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
-
