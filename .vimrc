@@ -8,7 +8,7 @@ syntax enable                    " syntax highlighting
 behave mswin                     " allow MS environment ctrl-p, ctrl-v
 
 " white space
-set nowrap
+set nowrap                       " do not wrap lines on default
 set tabstop=3                    " a tab is three spaces
 set shiftwidth=3                 " number of spaces to use for autoindenting
 set expandtab                    " use spaces not tabs
@@ -60,3 +60,6 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 
 " save file and execute chisel.py from any of posts in my github directory
 :nnoremap <leader>m <Esc>:w<CR>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
+
+" toggle text wrap
+nnoremap <leader>w :set nowrap!<CR>
