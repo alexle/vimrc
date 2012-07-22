@@ -63,3 +63,13 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 
 " toggle text wrap
 nnoremap <leader>w :set nowrap!<CR>
+
+" key mapping for google search
+function! Google()
+	call inputsave()
+	let searchterm = input('Google: ')
+	call inputrestore()
+	return searchterm
+endfunction
+map <leader>g <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
+
