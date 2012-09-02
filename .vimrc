@@ -53,16 +53,16 @@ let mapleader = ","
 nnoremap ; :
 
 " map jj key combination to esc key
-inoremap jj <esc>
+inoremap jj <ESC>
 
 " quick nerd tree toggle
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " save file and execute chisel.py from any of posts in my github directory
-:nnoremap <leader>m <Esc>:w<CR>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
+:nnoremap <leader>m <ESC>:w<CR>:cd ..<CR>:silent !python chisel.py<CR>:cd %:p:h<CR>
 
-" toggle text wrap
-nnoremap <leader>w :set nowrap!<CR>
+" toggle text wrap and line break on word boundaries
+nnoremap <leader>w :set nowrap! linebreak<CR>
 
 " key mapping for google search
 function! Google()
