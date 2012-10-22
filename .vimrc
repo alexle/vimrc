@@ -74,12 +74,14 @@ endfunction
 map <leader>g <ESC>:! /usr/bin/open -a "/Applications/Google Chrome.app" 'https://google.com/search?q=<C-R>=Google()<CR>'<CR><CR>
 
 " macro for blog writing
-function ToggleWrap()
+function ToggleBlog()
   if &wrap
-    echo "Wrap OFF"
+    echo "Blog OFF"
     setlocal nowrap
     set virtualedit=all
     setlocal lines=50 columns=200
+    color desert 
+    setlocal guifont=menlo:h11
     silent! nunmap <buffer> k
     silent! nunmap <buffer> j
     silent! nunmap <buffer> 0
@@ -89,15 +91,17 @@ function ToggleWrap()
     silent! iunmap <buffer> 0
     silent! iunmap <buffer> $
   else
-    echo "Wrap ON"
+    echo "Blog ON"
     setlocal wrap linebreak nolist
     set virtualedit=
     setlocal display+=lastline
-    setlocal lines=50 columns=110
+    setlocal lines=50 columns=90
+    color morning 
+    setlocal guifont=menlo:h14
     noremap <buffer> <silent> k gk
     noremap <buffer> <silent> j gj
     noremap <buffer> <silent> 0 g0
     noremap <buffer> <silent> $ g$
   endif
 endfunction
-noremap <silent> <leader>b :call ToggleWrap()<CR>
+noremap <silent> <leader>b :call ToggleBlog()<CR>
