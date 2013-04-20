@@ -55,6 +55,13 @@ nnoremap ; :
 " map jj key combination to esc key
 inoremap jj <ESC>
 
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+" Quickly clear highlight search
+nmap <silent> ,/ :nohlsearch<CR>
+
 " quick nerd tree toggle
 nnoremap <leader>n :NERDTreeToggle<CR>
 
