@@ -59,6 +59,10 @@ inoremap jj <ESC>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+" Map bracket match to tab key
+nnoremap <tab> %
+vnoremap <tab> %
+
 " Quickly clear highlight search
 nmap <silent> ,/ :nohlsearch<CR>
 
